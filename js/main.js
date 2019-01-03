@@ -28,22 +28,4 @@ $(document).ready(function(){
 		});
 	}
 
-	function movieSelected(id){
-		sessionStorage.setItem('movieId', id);
-		window.location = 'movie.html';
-		return false;
-	}
-
-	function getMovie(){
-		let movieId = sessionStorage.getItem('movieId');
-
-
-		axios.get('http://www.omdbapi.com/?i='+movieId+'&apikey=9ec8e677').then(function(response){
-			console.log(response);
-
-		}).catch(function(err){
-			console.log(err);
-		});
-
-	}
 });

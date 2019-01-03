@@ -24,13 +24,19 @@
 	</div>
 
 	<div class="container">
-		<div id="movies" class="row">
-			
-		</div>
+		<div id="movies" class="row"></div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script src="js/main.js"></script>
+	<script type="text/javascript">
+		function movieSelected(id){
+			sessionStorage.setItem('movieId', id);
+			window.location = 'movie.html';
+			return false;
+		}
+	</script>
+
 </body>
 </html>
